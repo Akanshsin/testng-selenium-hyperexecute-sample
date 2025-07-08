@@ -10,6 +10,7 @@ matrix:
 env:
   TEST: ${{ .secrets.TESTCasing122 }}
   PAT: ${{ .secrets.Karma12233 }}
+ #TEST: ${{ .secrets.testkey }}  
 pre:
   - mvn dependency:resolve
   - python3 key.py ${TEST} testCasing122
