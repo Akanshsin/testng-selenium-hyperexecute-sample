@@ -8,7 +8,7 @@ matrix:
   version: ["latest"]
   os: ["linux"]
 env:
-  TEST: ${{ .secrets.TESTCasing122 }}
+  TEST: ${{ .secrets.TESTCasing12112 }}
   PAT: ${{ .secrets.Karma12233 }}
  #TEST: ${{ .secrets.testkey }}  
 pre:
