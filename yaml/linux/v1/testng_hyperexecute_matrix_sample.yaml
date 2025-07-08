@@ -8,11 +8,11 @@ matrix:
   version: ["latest"]
   os: ["linux"]
 env:
-  PAT: ${{ .secrets.Karma12233 }}
+  #PAT: ${{ .secrets.Karma12233 }}
   TEST: ${{ .secrets.TESTCasing122 }}
 pre:
   - mvn dependency:resolve
-  - python3 key.py ${PAT} ProjectSecret
+  #- python3 key.py ${PAT} ProjectSecret
   - python3 key.py ${TEST} testCasing122
 
 testSuites:
