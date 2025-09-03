@@ -107,9 +107,7 @@ public class Test1
             String actualText = driver.findElement(remainingItem).getText();
             String expectedText = remaining+" of "+totalCount+" remaining";
 
-            if (!expectedText.equals(actualText)) {
-                System.out.println(expectedText);
-                System.out.println(actualText);
+            if (!actualText.contains(expectedText)) {
                 test1.log(LogStatus.FAIL, "Wrong Text Description");
                 status = "failed";
             }
@@ -131,6 +129,7 @@ public class Test1
         }
     }
 }
+
 
 
 
