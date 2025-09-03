@@ -108,6 +108,8 @@ public class Test1
             String expectedText = remaining+" of "+totalCount+" remaining";
 
             if (!expectedText.equals(actualText)) {
+                System.out.println(expectedText);
+                System.out.println(actualText);
                 test1.log(LogStatus.FAIL, "Wrong Text Description");
                 status = "failed";
             }
@@ -129,5 +131,6 @@ public class Test1
         }
     }
 }
+
 
 
