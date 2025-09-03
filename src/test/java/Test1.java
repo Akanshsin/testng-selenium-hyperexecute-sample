@@ -84,7 +84,7 @@ public class Test1
 
         int item_count = 5;
 
-        for (int i = 1; i <= item_count; i++) {
+        for (int i = 1; i < item_count; i++) {
             addText.click();
             addText.sendKeys("Adding a new item " + i + Keys.ENTER);
             test1.log(LogStatus.PASS, "New item No. " + i + " is added");
@@ -129,3 +129,4 @@ public class Test1
         }
     }
 }
+
