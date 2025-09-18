@@ -10,6 +10,8 @@ matrix:
 vars:
   mine: akansh
   yours: sachin
+  vars_key: hello
+  vars_key1: ${vars_key}
 
 pre:
   - echo ${vars_key}
