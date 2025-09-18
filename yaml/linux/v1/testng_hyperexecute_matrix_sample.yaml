@@ -23,11 +23,12 @@ testSuites:
 parallelism: 1
 report: true
 partialReports:
+  location: target/
   type: html
-  location: target
   frameworkName: extent
   email:
-    to: [ ${email} ]
+    to:
+      - ${vars_key}
 retryOnFailure: true
 maxRetries: 1
 
