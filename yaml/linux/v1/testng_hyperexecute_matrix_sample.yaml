@@ -7,9 +7,14 @@ matrix:
   browser: ["Chrome"]
   version: ["latest"]
   os: ["linux"]
-  
+vars:
+  mine: akansh
+  yours: sachin
+
 pre:
   - echo ${vars_key}
+  - echo ${mine}
+  - echo ${yours}
   - mvn dependency:resolve
   # - python3 key.py ${TEST} testCasing122
   # - python3 key.py ${PAT} ProjectSecret
