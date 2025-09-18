@@ -12,11 +12,13 @@ vars:
   yours: sachin
   vars_key: hello
   vars_key1: ${vars_key}
+  ${vars_key}: hello
 
 pre:
   - echo ${vars_key}
   - echo ${mine}
   - echo ${yours}
+  - echo ${vars_key1}
   - mvn dependency:resolve
   # - python3 key.py ${TEST} testCasing122
   # - python3 key.py ${PAT} ProjectSecret
@@ -30,9 +32,7 @@ partialReports:
   location: target/
   type: html
   frameworkName: extent
-  email:
-    to:
-      - ${vars_key}
+
 retryOnFailure: true
 maxRetries: 1
 
