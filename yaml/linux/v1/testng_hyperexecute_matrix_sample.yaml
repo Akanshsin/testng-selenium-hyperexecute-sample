@@ -9,6 +9,7 @@ matrix:
   os: ["linux"]
   
 pre:
+  - echo ${vars_key}
   - mvn dependency:resolve
   # - python3 key.py ${TEST} testCasing122
   # - python3 key.py ${PAT} ProjectSecret
