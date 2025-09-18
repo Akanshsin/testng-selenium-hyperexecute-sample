@@ -22,9 +22,9 @@ partialReports:
   location: target/
   type: html
   frameworkName: extent
-  email:
-    to:
-      - ${vars_key}
+  # email:
+  #   to:
+  #     - ${vars_key}
 retryOnFailure: true
 maxRetries: 1
 
