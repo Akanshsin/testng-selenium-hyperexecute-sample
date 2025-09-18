@@ -7,6 +7,7 @@ matrix:
   browser: ["Chrome"]
   version: ["latest"]
   os: ["linux"]
+  
 env:
   PAT: ${{ .secrets.Karma12233 }}
   TEST: ${{ .secrets.TESTCasing122 }}
@@ -20,7 +21,13 @@ testSuites:
   - mvn test -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -DselectedTests=$tests
 
 parallelism: 1
-
+report: true
+partialReports:
+  type: html
+  location: target
+  frameworkName: extent
+  email:
+    to: [ ${email} ]
 retryOnFailure: true
 maxRetries: 1
 
