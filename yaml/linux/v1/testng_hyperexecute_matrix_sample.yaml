@@ -8,20 +8,22 @@ matrix:
   version: ["latest"]
   os: ["linux"]
 vars:
-  mine: akansh
-  yours: sachin
-  vars_key: hello
-  vars_key1: ${vars_key}
-  ${vars_key}: hello11
-  value_recursive: ${${vars_key}}
+  # mine: akansh
+  # yours: sachin
+  # vars_key: hello
+  # vars_key1: ${vars_key}
+  # ${vars_key}: hello11
+  # value_recursive: ${${vars_key}}
+  abc: ${api_key}
 
 pre:
-  - echo ${vars_key}
-  - echo ${mine}
-  - echo ${yours}
-  - echo ${vars_key1}
-  - echo ${${vars_key}}
-  - echo ${NEW_KEY}
+  - echo ${abc}
+  # - echo ${vars_key}
+  # - echo ${mine}
+  # - echo ${yours}
+  # - echo ${vars_key1}
+  # - echo ${${vars_key}}
+  # - echo ${NEW_KEY}
   - mvn dependency:resolve
   # - python3 key.py ${TEST} testCasing122
   # - python3 key.py ${PAT} ProjectSecret
@@ -35,6 +37,8 @@ partialReports:
   location: target/
   type: html
   frameworkName: extent
+  email:
+    to: ${email}
 
 retryOnFailure: true
 maxRetries: 1
