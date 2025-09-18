@@ -12,7 +12,7 @@ vars:
   yours: sachin
   vars_key: hello
   vars_key1: ${vars_key}
-  ${vars_key}: hello
+  ${vars_key}: hello11
   value_recursive: ${${vars_key}}
 
 pre:
