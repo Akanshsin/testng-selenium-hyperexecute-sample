@@ -21,6 +21,7 @@ pre:
   - echo ${yours}
   - echo ${vars_key1}
   - echo ${${vars_key}}
+  - echo ${NEW_KEY}
   - mvn dependency:resolve
   # - python3 key.py ${TEST} testCasing122
   # - python3 key.py ${PAT} ProjectSecret
