@@ -8,14 +8,10 @@ matrix:
   version: ["latest"]
   os: ["linux"]
   
-env:
-  PAT: ${{ .secrets.Karma12233 }}
-  TEST: ${{ .secrets.TESTCasing122 }}
- #TEST: ${{ .secrets.testkey }}  
 pre:
   - mvn dependency:resolve
-  - python3 key.py ${TEST} testCasing122
-  - python3 key.py ${PAT} ProjectSecret
+  # - python3 key.py ${TEST} testCasing122
+  # - python3 key.py ${PAT} ProjectSecret
 
 testSuites:
   - mvn test -Dplatname=linux -Dmaven.repo.local=m2_cache_dir -DselectedTests=$tests
