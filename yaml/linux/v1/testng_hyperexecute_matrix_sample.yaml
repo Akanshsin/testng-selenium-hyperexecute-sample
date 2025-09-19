@@ -39,7 +39,8 @@ partialReports:
   type: html
   frameworkName: extent
   email:
-    to: ${email}
+    to: 
+      - ${email}
 
 retryOnFailure: true
 maxRetries: 1
