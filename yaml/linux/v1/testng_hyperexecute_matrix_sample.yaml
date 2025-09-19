@@ -18,6 +18,7 @@ vars:
 
 pre:
   - echo ${abc}
+  - echo ${mygate}
   # - echo ${vars_key}
   # - echo ${mine}
   # - echo ${yours}
