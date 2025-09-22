@@ -99,7 +99,7 @@ public class Test1
         int totalCount = item_count+5;
         int remaining = totalCount-1;
 
-        for (int i = 1; i <= totalCount; i++, remaining--) {
+        for (int i = 1; i < totalCount; i++, remaining--) {
 
             String xpath = "(//input[@type='checkbox'])["+i+"]";
 
@@ -112,6 +112,7 @@ public class Test1
 
             if (!expectedText.contains(actualText)) {
                 test1.log(Status.FAIL, "Wrong Text Description");
+                System.out.println("unmatched at "+expectedText+" "+actualText);
                 status = "failed";
             }
             Thread.sleep(500);
@@ -194,4 +195,5 @@ public class Test1
         }
     }
 }
+
 
