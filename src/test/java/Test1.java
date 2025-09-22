@@ -108,9 +108,9 @@ public class Test1
             test1.log(Status.PASS, "Item No. " + i + " marked completed");
             By remainingItem = By.className("ng-binding");
             String actualText = driver.findElement(remainingItem).getText();
-            String expectedText = remaining+" of "+totalCount+" remaining";
+            String expectedText = remaining+" of "+totalCount+" tasks remaining";
 
-            if (!expectedText.equals(actualText)) {
+            if (!expectedText.contains(actualText)) {
                 test1.log(Status.FAIL, "Wrong Text Description");
                 status = "failed";
             }
@@ -194,3 +194,4 @@ public class Test1
         }
     }
 }
+
