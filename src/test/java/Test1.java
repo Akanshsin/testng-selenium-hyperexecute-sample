@@ -110,7 +110,7 @@ public class Test1
             String actualText = driver.findElement(remainingItem).getText();
             String expectedText = remaining+" of "+totalCount+" tasks remaining";
 
-            if (!expectedText.contains(actualText)) {
+            if (!actualText.contains(expectedText)) {
                 test1.log(Status.FAIL, "Wrong Text Description");
                 System.out.println("unmatched at "+expectedText+" "+actualText);
                 status = "failed";
@@ -195,5 +195,6 @@ public class Test1
         }
     }
 }
+
 
 
