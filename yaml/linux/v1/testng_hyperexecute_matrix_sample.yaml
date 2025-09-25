@@ -8,19 +8,19 @@ matrix:
   version: ["latest"]
   os: ["linux"]
 vars:
-  # mine: akansh
+  mine: akansh
   # yours: sachin
   # vars_key: hello
   # vars_key1: ${vars_key}
   # ${vars_key}: hello11
   # value_recursive: ${${vars_key}}
-  abc: ${api_key}
+  abc: hello
 
 pre:
   - echo ${abc}
   - echo ${mygate}
   # - echo ${vars_key}
-  # - echo ${mine}
+  - echo ${mine}
   # - echo ${yours}
   # - echo ${vars_key1}
   # - echo ${${vars_key}}
