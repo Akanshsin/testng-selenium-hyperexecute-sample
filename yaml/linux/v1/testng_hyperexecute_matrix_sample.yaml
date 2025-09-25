@@ -38,9 +38,7 @@ partialReports:
   location: target/
   type: html
   frameworkName: extent
-  email:
-    to: 
-      - ${email}
+
 
 retryOnFailure: true
 maxRetries: 1
