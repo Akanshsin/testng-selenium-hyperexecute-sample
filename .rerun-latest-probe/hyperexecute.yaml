@@ -1,0 +1,12 @@
+---
+version: 0.1
+runson: linux
+autosplit: true
+concurrency: 1
+testDiscovery:
+  type: raw
+  mode: remote
+  command: echo SCN
+testRunnerCommand: cat rerun_marker.txt; echo RUNEND; exit 1
+jobLabel: [rerun-latest-probe]
+
